@@ -40,6 +40,10 @@ const options = {
 request(options, (error, response, body) => {
     if (error) throw new Error(error)
     // console.log(body)
+    if(response.statusCode != 200){
+        console.log('status code is ', response.statusCode);
+        return;
+    }
     const btcBalance = body.account.balance;
     console.log("your btc balance = ", btcBalance)
     if(btcBalance >= 0.0001){
@@ -50,6 +54,7 @@ request(options, (error, response, body) => {
                 currency: 'BTC',
                 amount: '0.0001',
                 address: 'btc-pizzaday-2021',//event address!!!!!!!
+                transaction_type: 'internal',//바로 출금(일반출금은 수수료 있음)
             }
             
             const query = queryEncode(body)
