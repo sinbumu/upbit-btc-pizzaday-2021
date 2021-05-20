@@ -2,6 +2,10 @@
 pizza gazuaa
 
 
+만든 이유 - https://upbit.com/service_center/notice?id=1977
+업비트가 2021 05 21  12:00 에 피자 선착순 이벤트함. 해당 선착순 도전해보려고.
+
+
 how to run
 
 0.업비트 마이페이지 > open api 관리에 가서 open api 키 새로 만듬.
